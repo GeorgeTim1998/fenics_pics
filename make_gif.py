@@ -18,6 +18,6 @@ print(len(os.listdir(folder)))
 
 for i in range(len(files)):
     images.append(imageio.imread(os.path.join(folder, files[i])))
-    imageio.mimsave('mygif.gif', images, fps = 24)
+    imageio.mimsave('Gifs/mygif.gif', images, fps = 18)
     
 print(time.time() - t0)
