@@ -4,18 +4,13 @@ from PIL import Image
 import numpy as np
 
 folder1 = "Pics/Novessel#3"
-folder2 = "Pics/AbsoluteVessel#1"
+folder2 = "Pics/Vessel#3"
 concat_folder= "Pics/Concat#3"
 
-# for i in sorted(os.listdir(folder1)):
-#     print(i)
-# for i in sorted(os.listdir(folder2)):
-#     print(i)
-    
 files1 = sorted(os.listdir(folder1))
 files2 = sorted(os.listdir(folder2))
-# print(len(os.listdir('Vessel#2')))
-# print(len(os.listdir('Novessel#2')))
+print(len(os.listdir('Vessel#2')))
+print(len(os.listdir('Novessel#2')))
 
 for i in range(len(files1)):
     print("%d/%d -> %.2f" % (i+1, 
