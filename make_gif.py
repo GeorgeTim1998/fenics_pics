@@ -7,7 +7,10 @@ def mysort(string):
 
 t0 = time.time()
 
-folder = "Pics/Concat#3"
+NAME = 'ITER'
+i = 1
+
+folder = "Pics/%sConcat#%d" % (NAME, i)
 files = sorted(os.listdir(folder), key=mysort)
 images = []
 
@@ -22,7 +25,7 @@ for i in range(len(files)):
 
 print(time.time() - t0)
 
-savepath = 'Pics/Gifs/mygif.gif'
+savepath = "Pics/Gifs/%s.gif" % NAME
 imageio.mimsave(savepath, images, fps = 18)
 print("Gid saved to: %s" % savepath)
 
