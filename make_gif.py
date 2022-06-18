@@ -9,7 +9,9 @@ def mysort(string):
 t0 = time.time()
 
 NAME = 'ITER'
-attempt = 1
+attempt = 2
+FPS = 12
+
 print("\nCombining pics from folders...")
 combine_folder.combine_pics_from_folders(NAME, attempt)
 
@@ -30,7 +32,7 @@ for i in range(len(files)):
 print(time.time() - t0)
 
 savepath = "Pics/Gifs/%sConcat#%d.gif" % (NAME, attempt)
-imageio.mimsave(savepath, images, fps = 18)
+imageio.mimsave(savepath, images, fps = FPS)
 print("Gif saved to: %s" % savepath)
 
 print(time.time() - t0)
