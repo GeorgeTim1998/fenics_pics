@@ -1,6 +1,7 @@
 import os
 import imageio
 import time
+import combine_folder
 
 def mysort(string):
     return int(string.split(".png")[0])
@@ -8,15 +9,18 @@ def mysort(string):
 t0 = time.time()
 
 NAME = 'ITER'
-i = 1
+attempt = 1
+print("\nCombining pics from folders...")
+combine_folder.combine_pics_from_folders(NAME, attempt)
 
-folder = "Pics/%sConcat#%d" % (NAME, i)
+folder = "Pics/%sConcat#%d" % (NAME, attempt)
 files = sorted(os.listdir(folder), key=mysort)
 images = []
 
 print(len(os.listdir(folder)))
 print(time.time() - t0)
 
+print("\nCreating gif...")
 for i in range(len(files)):
     print("%d/%d -> %.2f" % (i+1, 
                              len(files),
@@ -25,8 +29,8 @@ for i in range(len(files)):
 
 print(time.time() - t0)
 
-savepath = "Pics/Gifs/%s.gif" % NAME
+savepath = "Pics/Gifs/%sConcat#%d.gif" % (NAME, attempt)
 imageio.mimsave(savepath, images, fps = 18)
-print("Gid saved to: %s" % savepath)
+print("Gif saved to: %s" % savepath)
 
 print(time.time() - t0)
