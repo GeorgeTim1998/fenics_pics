@@ -8,9 +8,9 @@ def mysort(string):
 
 t0 = time.time()
 
-NAME = 'ITER'
-attempt = 2
-FPS = 12
+NAME = ''
+attempt = 6
+FPS = 18
 
 print("\nCombining pics from folders...")
 combine_folder.combine_pics_from_folders(NAME, attempt)

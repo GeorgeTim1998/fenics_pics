@@ -8,6 +8,9 @@ def combine_pics_from_folders(NAME, i):
     folder2 = "Pics/%sVessel#%d"  % (NAME, i)
     concat_folder= "Pics/%sConcat#%d"  % (NAME, i)
 
+    if os.path.exists(concat_folder) == False:
+        os.mkdir(concat_folder)
+
     files1 = sorted(os.listdir(folder1))
     files2 = sorted(os.listdir(folder2))
 
