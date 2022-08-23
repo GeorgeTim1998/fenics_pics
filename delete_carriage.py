@@ -1,13 +1,7 @@
-with open('Texts/pre_carriage.txt') as f:
-    lines = f.readlines()
+from tkinter import Tk
 
-for i in range(len(lines)):
-    if lines[i] != "\n":
-        lines[i] = lines[i].replace("\n", " ")
-
-
-lines = ' '.join(lines)
+clipboard_text = Tk().clipboard_get().replace("\n", " ")
 
 file = open("Texts/post_carriage.txt", "w")
-file.write(lines)
+file.write(clipboard_text)
 file.close()
