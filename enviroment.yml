@@ -1,0 +1,6 @@
+name: fenicspics
+channels:
+  - conda-forge
+dependencies:
+  - defaults::python=3.7.4
+  - pillow=9.2.0
